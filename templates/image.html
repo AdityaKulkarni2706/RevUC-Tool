@@ -1,39 +1,172 @@
 <!DOCTYPE html>
-
+<html>
 <head>
+    <style>
+
+        /* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1d3;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Header Section */
+header {
+    background-color: #A4B465;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logout-link {
+    color: #1B4D3E;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.logout-link:hover {
+    color: #DF6D2D;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Form Styling */
+.form-container {
+    padding: 2rem 0;
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    padding: 0.8rem;
+    border: 2px solid #A4B465;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.title {
+    color: #54473F;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    background-color: #DF6D2D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #A4B465;
+}
+
+/* Image Display */
+.image-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.generated-image {
+    max-width: 50%; /* Reduced from 100% to make it smaller */
+    max-height: 400px; /* Added maximum height for consistency */
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.status-text {
+    color: #54473F;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header {
+        padding: 0.8rem;
+    }
+
+    .logout-link {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .input-field {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .submit-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .status-text {
+        font-size: 1.2rem;
+    }
+}
 
 
+    </style>
 </head>
-
-
 <body>
+    <header>
+        <a href="http://127.0.0.1:5000/logout" class="logout-link">Logout</a>
+    </header>
+    
+    <main>
+        <div class="form-container">
 
-
-    <br>
-
-    <a href="http://127.0.0.1:5000/logout">Logout</a>
-
-
-    <input id="username" placeholder="Enter your username">
-
-    <h1>Image</h1>
-
-    <input type="file" accept="image/*" id="input_image" placeholder="Enter image">
-    <br><br>
-
-
-    <button id="submit">Submit</button>
-
-    <br>
-
-    <h1 id="uploading-text"></h1>
-
-    <img id="gen-img" alt="Generated Image">
-
-
+            <h1 class="title">Image Generator</h1>
+            <input id="username" class="input-field" placeholder="Enter your username">
+            
+            
+            
+            <input type="file" accept="image/*" id="input_image" class="input-field">
+            
+            <button id="submit" class="submit-btn">Submit</button>
+            
+            <h1 id="uploading-text" class="status-text"></h1>
+            
+            <div class="image-container">
+                <img id="gen-img" class="generated-image" alt="(Image yet to be fully generated)">
+            </div>
+        </div>
+    </main>
 
     <script src="/static/image.js"></script>
-
-   
-
 </body>
+</html>

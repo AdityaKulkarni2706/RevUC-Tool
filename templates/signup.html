@@ -2,15 +2,50 @@
 
 <head>
     <style>
-        body {
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #D7D3BF;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: 0;
+}
+
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    border: 0;
+    background-color: #A4B465;
+    padding-left: 0.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+}
+
+#mid-container {
+    position: relative;
+    top: 10rem;
+}
+
+.top-elem{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+#top-title{
+    color: #1B4D3E;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 1rem;
+    font-size: 2.3rem;
 }
 
 #sign-up-title {
@@ -73,48 +108,102 @@
     color: red;
 }
 
+
+#lower-bar {
+    background-color: #2E5077;
+    width: 100%;
+    height: 9.64rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#contact{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 1.9rem;
+    font-style: normal;
+    color: beige;
+}
+
+.contact-details{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-det{
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.contact-bold{
+    font-weight: 600;
+}
+
     </style>
 
 </head>
 
 <body>
 
-    <div id="sign-up-title">
-        Sign Up
-    </div>
-    <br>
-
-    <div id="username-text">
-        Username
-
+    <div id="top-bar">
+        <h1 id="top-title">ForVerde.</h1>
     </div>
 
-    <div id="username-text-box">
-        <input id="username-input" placeholder="Enter username here:">
-    </div>
-
-    <div id="password-text">
-        Password
-
-    </div>
-
-    <div id="password-text-box">
-        <input id="password-input" placeholder="Enter password here:">
-    </div>
-
-    <br>
-
-    <div id="credentials-submit">
-        <button id="cred-btn">Submit</button>
-
-    </div>
-
-    <a href="http://localhost:5000/login">Log in</a>
+    <div id="mid-container">
+        <div id="sign-up-title">
+            Sign Up
+        </div>
+        <br>
     
-    <h1 id="success-message"> Signed up!</h1>
-
-    <h1 id="failure-message"> User already exists!</h1>
+        <div id="username-text">
+            Username
     
+        </div>
+    
+        <div id="username-text-box">
+            <input id="username-input" placeholder="Enter username here:">
+        </div>
+    
+        <div id="password-text">
+            Password
+    
+        </div>
+    
+        <div id="password-text-box">
+            <input id="password-input" placeholder="Enter password here:">
+        </div>
+    
+        <br>
+    
+        <div id="credentials-submit">
+            <button id="cred-btn">Submit</button>
+    
+        </div>
+    
+        <a href="http://localhost:5000/login">Log in</a>
+        
+        <h1 id="success-message"> Signed up!</h1>
+    
+        <h1 id="failure-message"> User already exists!</h1>
+    </div>
+    
+    <div id="lower-bar">
+        <div class="contact-details">
+            <h2 id="contact">Contact Us</h2>
+        </div>
+
+        <div class="contact-details">
+            <p class="contact-det"><span class="contact-bold">✉️ Email: </span> greenscorehelp@gmail.com</p>
+            <p class="contact-det"><span class="contact-bold">📞 Phone Number: </span> +1-908-7654321</p> 
+        </div>
+    </div>
 
 
     <script src="/static/sign_up_functions.js"></script>
