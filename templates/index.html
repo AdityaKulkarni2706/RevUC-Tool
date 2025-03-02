@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenScore.com</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <title>Main Page</title>
+</head>
+
+    {% if logged_in %}
+        <p>Welcome, {{ username }}!</p>
+        <a href="http://127.0.0.1:5000/render_tool">Tool</a>
+        <a href="/logout">Logout</a>
+    {% else %}
+
+    <body>
+
+        <div id="top-bar">
+            <div class="top-elem">
+                <h1 id="top-title">GreenScore.</h1>
+            </div>
+    
+            <div id="sign-up-container"  class="top-elem top-btn-div">
+               <a href="/sign_up"><button id="sign-up-btn">Sign Up</button> </a> 
+            </div>
+    
+            <div id="login-container"  class="top-elem top-btn-div">
+                <a href="/login"><button id="login-btn">Login</button></a>
+            </div>
+        
+        
+        </div>
+    
+        <div id="mid-container">
+    
+            <div id="main-title-container">
+                <h1 id="main-title">Welcome to the Green Side :)</h1>
+            </div>
+    
+            <div id="img-container">
+                <img src="/static/main-img.png" alt="sustainability" id="main-img">
+            </div>
+    
+        </div>
+    
+        <div id="lower-bar">
+            <div class="contact-details">
+                <h2 id="contact">Contact Us</h2>
+            </div>
+    
+            <div class="contact-details">
+                <p class="contact-det"><span class="contact-bold">✉️ Email: </span> greenscorehelp@gmail.com</p>
+                <p class="contact-det"><span class="contact-bold">📞 Phone Number: </span> +1-908-7654321</p> 
+            </div>
+        </div>
+    
+        
+    
+    
+    
+     
+    
+    </body>
+
+        
+        
+    {% endif %}
+
+</html>

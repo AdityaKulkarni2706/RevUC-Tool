@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+}
+
+#top-bar{
+    position: fixed;
+    height: 5rem;
+    width: 100%;
+    border: 0;
+    background-color: #A4B465;
+    padding-left: 0.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: 2.8fr 2fr 0.5fr;
+}
+
+.top-elem{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+#top-title{
+    color: #1B4D3E;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 1rem;
+    font-size: 2.3rem;
+}
+
+
+
+#score-outline{
+    border-radius: 1rem;
+    border: solid white;
+    background-color: #685752;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.85rem;
+    margin-left: 12rem;
+}
+
+.score-title{
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    font-size: 1.8rem;
+}
+
+#logout-btn{
+    border-radius: 0.25rem;
+    height: 2.25rem;
+    width: 5rem;
+    background-color: #DF6D2D;
+    color: white;
+    border: 0;
+}
+
+
+
+#mid-container{
+    background-color: #D7D3BF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.card-container{
+    margin-top: 6rem;
+    border: solid 0.2rem black;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 30rem;
+}
+
+.card-container:hover{
+    background-color: #FFD95F;
+}
+
+#recipe-gen-container{
+    margin-left: 2rem;
+}
+
+#image-gen-container{
+    margin-right: 2rem;
+}
+
+.card-img{
+    margin-top: 2rem;
+    height: 15rem;
+    width: 20rem;
+}
+
+.gen-text-heading{
+    font-size: 4rem;
+    color: #443627;
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.no-underline{
+    text-decoration: none;
+}
+
+
+#lower-bar{
+    background-color: #2E5077;
+    width: 100%;
+    height: 9.64rem;
+}
+
+#contact{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 1.9rem;
+    font-style: normal;
+    color: beige;
+}
+
+.contact-details{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-det{
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.contact-bold{
+    font-weight: 600;
+}
+
+@media(max-width: 500px){
+    #top-bar{
+        position: fixed;
+        height: 5rem;
+        width: 100%;
+        border: 0;
+        background-color: #A4B465;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+    
+    .top-elem{
+        height: 5rem;
+        display: flex;
+        align-items: left;
+    }
+    
+    #top-title{
+        color: #1B4D3E;
+        margin: 0;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.5rem;
+        padding-left: 0rem;
+    }
+
+    
+    
+    #score-outline{
+        border-radius: 1rem;
+        border: solid white;
+        background-color: #685752;
+        height: 50%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.2rem;
+        margin-left: 1.3rem;
+    }
+    
+    .score-title{
+        font-family: "Rubik Dirt", system-ui;
+        font-weight: 500;
+        font-style: normal;
+        color: white;
+        font-size: 1rem;
+    }
+    
+    #logout-btn{
+        border-radius: 0.25rem;
+        height: 2.25rem;
+        width: 5rem;
+        background-color: #DF6D2D;
+        color: white;
+        border: 0;
+        margin-right: 1rem;
+    }
+    
+
+
+    #mid-container{
+        background-color: #D7D3BF;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .card-container{
+        border: solid 0.2rem black;
+        border-radius: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 23rem;
+    }
+    
+    #recipe-gen-container{
+        margin-right: 1.8rem;
+    }
+
+    #image-gen-container{
+        margin-left: 2.2rem;
+    }
+
+
+    .card-container:hover{
+        background-color: #FFD95F;
+    }
+    
+    #recipe-gen-container{
+        margin-left: 2rem;
+    }
+    
+    #image-gen-container{
+        margin-right: 2rem;
+    }
+    
+    .card-img{
+        margin-top: 2rem;
+        height: 10rem;
+        width: 15rem;
+    }
+    
+    .gen-text-heading{
+        font-size: 3rem;
+        color: #443627;
+        font-family: "Alegreya", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .no-underline{
+        text-decoration: none;
+    }
+
+
+    #lower-bar{
+        background-color: #2E5077;
+        width: 100%;
+        height: 9.55rem;
+    }
+    
+    #contact{
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        margin: 0;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-size: 1.5rem;
+        font-style: normal;
+        color: beige;
+    }
+    
+    .contact-details{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contact-det{
+        font-family: "PT Serif", serif;
+        font-style: normal;
+        font-size: 1.2rem;
+        color: whitesmoke;
+        margin-bottom: 0;
+    }
+    
+    .contact-bold{
+        font-weight: 600;
+    }
+}

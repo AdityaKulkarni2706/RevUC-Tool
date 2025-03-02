@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+
+    <title>
+
+    </title>
+
+    <style>
+        body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+#header {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+#ingredients {
+    font-weight: 600;
+    color: #34495e;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+#ingredients_input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+#ingredients_input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+#submit {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="header">Recipe Generator</h1>
+
+    <form id="form"></form>
+    <label id="ingredients">Ingredients : </label>
+    <input type="text" id="ingredients_input">
+    <br>
+    <button id="submit">Generate</button>
+    <br>
+    
+    <span id="recipe">
+
+    </span>
+
+    <br>
+
+    
+
+    <script src="../static/script.js"></script>
+</body>

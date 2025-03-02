@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenScore | Homepage</title>
+    <link rel="stylesheet" href="/static/homestyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    
+    <div id="top-bar">
+        <div class="top-elem">
+            <h1 id="top-title">GreenScore.</h1>
+        </div>
+
+
+        <div id="score-container top-elem">
+            <div id="score-outline">
+                <h2 class="score-title">Score: <span id="score-disp" class="score-title">0</span></h2>
+            </div>
+        </div>
+
+        <div id="logout-container"  class="top-elem top-btn-div">
+            <button id="logout-btn">Show</button>
+        </div>
+    
+    </div>
+
+    <div id="mid-container">
+
+        <a href="render_recipe_page" class="no-underline">
+            <div id="recipe-gen-container" class="card-container">
+                <img src="/static/cook-img.jpg" alt="cooking-img" class="card-img">
+                <h3 class="gen-text-heading">Recipe Generator</h3>
+            </div>
+        </a>
+
+        <a href="/render_tool" class="no-underline">
+            <div id="image-gen-container" class="card-container">
+                <img src="/static/trash-img.jpg" alt="trash-img" class="card-img">
+                <h3 class="gen-text-heading">Image Generator</h3>
+            </div>
+        </a>
+
+
+    </div>
+
+    <div id="lower-bar">
+        <div class="contact-details">
+            <h2 id="contact">Contact Us</h2>
+        </div>
+
+        <div class="contact-details">
+            <p class="contact-det"><span class="contact-bold">✉️ Email: </span> greenscorehelp@gmail.com</p>
+            <p class="contact-det"><span class="contact-bold">📞 Phone Number: </span> +1-908-7654321</p> 
+        </div>
+    </div>
+    
+</body>
+<script>
+    document.getElementById('logout-btn').addEventListener('click', getScore)
+    async function getScore(){
+        const response = await fetch('/get_score')
+        const respText = await response.json()
+        console.log(respText)
+        const score = respText.score
+        console.log(score)
+
+        document.getElementById('score-disp').textContent = score
+
+    }
+
+</script>
+</html>
