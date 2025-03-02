@@ -13,7 +13,7 @@ CORS(app, supports_credentials=True)
 app.secret_key = "102394020"
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config['SESSION_COOKIE_SECURE'] = False  # Set to True in production
-app.config['SESSION_COOKIE_HTTPONLY'] = True
+
 
 global current_user
 @app.route('/')
@@ -155,8 +155,10 @@ def render_recipe_page():
 @app.route('/get_score')
 
 def get_score():
-    username = session['username']
+
     print(session)
+    username = session['username']
+
     score = functions.fetch_score(username)
     
     return {"score" : int(score[0])}
